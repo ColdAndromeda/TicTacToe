@@ -1,14 +1,15 @@
 body {
-
+    margin-right: 90px;
+    margin-left: 90px;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     height: 90vh;
+    gap: 50px;
 }
 
 table {
     display: flex;
-    margin-left: 10px;
     border-collapse: collapse;
 }
 
@@ -19,4 +20,16 @@ td {
     width: 15vh;
     height: 15vh;
     font-size: 30px;
+}
+
+scorecounter {
+    justify-content: space-between;
+    padding: 50px;
+    font-size: 60px;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+}
+
+scorecounter #XWins {
+    padding-bottom: 80px;
 }
