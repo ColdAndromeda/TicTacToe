@@ -1,0 +1,22 @@
+body {
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 90vh;
+}
+
+table {
+    display: flex;
+    margin-left: 10px;
+    border-collapse: collapse;
+}
+
+td {
+    border: 5px solid rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    width: 15vh;
+    height: 15vh;
+    font-size: 30px;
+}
