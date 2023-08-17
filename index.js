@@ -49,7 +49,11 @@ const AddMove = (id) => {
             .textContent.split(":")[1]
         ) +
           1);
-      isBoolean = false; // Disable further moves when someone wins
+      isBoolean = false;
+      ResetGame();
+
+      setTimeout(GetDataCell(), 2000);
+      // Disable further moves when someone wins
       return;
     }
 
@@ -126,4 +130,25 @@ const GetDataCell = () => {
   });
 };
 
-GetDataCell();
+const ResetGame = () => {
+  // Reset the game board
+  GameBoard = [
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""],
+  ];
+
+  // Reset the visual representation of the board
+  let DataCell = document.querySelectorAll("td");
+  DataCell.forEach((DataCell) => {
+    DataCell.textContent = "";
+  });
+
+  // Reset the current player
+  currentPlayer = "X";
+
+  // Enable moves
+  isBoolean = true;
+};
+
+setTimeout(GetDataCell(), 1000);
